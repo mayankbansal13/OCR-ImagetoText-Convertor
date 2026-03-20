@@ -37,6 +37,7 @@ Tesseract OCR (system install — see below)
 
 
 🚀 Getting Started
+
 Step 1 — Install Tesseract OCR (system dependency)
 Tesseract must be installed at the OS level before anything else.
 Windows:
@@ -58,6 +59,7 @@ Step 4 — Run the tool
 bashpython ocr.py image.png
 
 🛠️ Usage
+
 bashpython ocr.py [image] [options]
 Arguments
 ArgumentDescriptionimagePath to the image file (optional — will prompt if not provided)--langTesseract language code (default: eng)--no-preprocessSkip image preprocessing--saveSave extracted text to a .txt file
@@ -88,9 +90,11 @@ bashbrew install tesseract-lang
 Full list of language codes: Tesseract Language List
 
 🖼️ Supported Image Formats
+
 FormatExtensionPNG.pngJPEG.jpg, .jpegTIFF.tiff, .tifBitmap.bmpWebP.webp
 
 📁 Project Structure
+
 ocr-extractor/
 ├── ocr.py               # Main script
 ├── requirements.txt     # Python dependencies
@@ -99,6 +103,7 @@ Output files (when using --save) are saved in the same folder as the input image
 invoice.png  →  invoice_extracted.txt
 
 ⚙️ How Preprocessing Works
+
 When preprocessing is enabled (default), the image goes through:
 
 Grayscale conversion — removes color noise
@@ -108,10 +113,12 @@ Contrast boost (2×) — makes text stand out from background
 This significantly improves accuracy on photos, scans, and screenshots. Use --no-preprocess only if your image is already a clean, high-resolution scan.
 
 📊 Confidence Score
+
 After extraction, a confidence score (0–100%) is shown:
 ScoreMeaning90–100%Excellent — clean image, clear text70–89%Good — minor noise or blur50–69%Fair — consider preprocessing or better imageBelow 50%Poor — image quality likely needs improvement
 
 🛠️ Troubleshooting
+
 TesseractNotFoundError
 → Tesseract is not installed or not in PATH. Follow Step 1 above.
 Windows: Tesseract found but still errors
@@ -124,6 +131,7 @@ Language not found
 → Install the language pack for your OS (see Language Support section above).
 
 📄 License
+
 MIT License — free to use, modify, and distribute.
 
 🙌 Acknowledgements
