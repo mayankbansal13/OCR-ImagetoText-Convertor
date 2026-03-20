@@ -1,4 +1,5 @@
 🔍 OCR Image to Text Extractor
+
 A command-line tool to extract text from images using Tesseract OCR and Python. Supports preprocessing for better accuracy, confidence scoring, multi-language extraction, and optional file output.
 
 ✨ Features
@@ -13,6 +14,7 @@ A command-line tool to extract text from images using Tesseract OCR and Python. 
 
 
 🖥️ Demo
+
 bash$ python ocr.py invoice.png --save
 
 Processing: invoice.png
